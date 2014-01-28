@@ -1,7 +1,7 @@
 #RJFacts
 
 ## Info
-RJ Facts is a simple grails app that powers a site where you can find facts about RJ.
+RJ Facts is a simple grails app that powers a site where you can find facts about RJ. These facts are internet facts. Much like Chuck Norris or Mr T facts.
 
 ## Usage
 This app can be deployed directly as is and will create a user via the Bootstrap.groovy file named "hero" with an Apikey of ""
@@ -20,7 +20,7 @@ This will fetch a random RJ fact from the database
 
     curl -v -k -H "X-RJF-Apikey: 123456qwerty" https://site.com/api/fact
 
-You can also POST to add new facts. A json body of:
+You can also POST (using above URL) to add new facts. A json body of:
 
     {
         "class":"com.toastcoders.rjfacts.Fact",
@@ -30,6 +30,8 @@ You can also POST to add new facts. A json body of:
         },
         "factoid":"thinking of facts is hard"
     }
+
+You will get a JSON response of your new factoid with an id. The id can be used below.
 
 You can also get a specific fact if you know its id:
 
