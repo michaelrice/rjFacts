@@ -16,7 +16,8 @@ In development mode (grails run-app) you do not need an API Key.
 In production mode (deployed to tomcat for example) you will need to access using the apikey
 
 ###Examples
-This will fetch a random RJ fact from the database.
+This will fetch a random RJ fact from the database
+
     curl -v -k -H "X-RJF-Apikey: 123456qwerty" https://site.com/api/fact
 
 You can also POST to add new facts. A json body of:
@@ -31,9 +32,11 @@ You can also POST to add new facts. A json body of:
     }
 
 You can also get a specific fact if you know its id:
+
     curl -v -k -H "X-RJF-Apikey: 1234456qwerty" https://site.com/api/fact/11
 
 If you get tired of a fact it can be deleted like so:
+
     curl -v -k -H "X-RJF-Apikey: 123456qwerty" -XDELETE https://site.com/api/fact/11
 
 ###TODO
